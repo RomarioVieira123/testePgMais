@@ -28,9 +28,10 @@ class ValidationFacade:
                 # Números que estão na blacklist devem ser bloqueadas.
                 for numberblacklist in blacklistnumbers:
                     if numberblacklist['phone'] == message['celular']:
-                        data_isnotvalid.append(json.dumps(message))
-                        isvalid = False
-                        break
+                        if numberblacklist['active']:
+                            data_isnotvalid.append(json.dumps(message))
+                            isvalid = False
+                            break
 
                 # Mensagens para SP devem ser bloqueadas.
                 if isvalid:
@@ -98,8 +99,7 @@ class ValidationFacade:
             for destiny in data_isvalid:
                 data2 = json.loads(destiny)
                 if data['ddd'] == data2['ddd'] and data['celular'] == data2['celular']:
-                    if datetime.strptime(data['horario_envio'], DATE_FORMAT) > datetime.strptime(data2['horario_envio'],
-                                                                                                 DATE_FORMAT):
+                    if datetime.strptime(data['horario_envio'], DATE_FORMAT) > datetime.strptime(data2['horario_envio'],  DATE_FORMAT):
                         blocked_message = data
 
             if blocked_message is not None:

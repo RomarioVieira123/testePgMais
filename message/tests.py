@@ -27,7 +27,7 @@ class CreateMessagesCase(TestCase):
         Broker.objects.create(name="tiago")
         Broker.objects.create(name="vanessa")
 
-    #Testar gravação da mensagem no banco de dados.
+    #Testar gravação da mensagem no banco de dados e o retorno do respectivo broker de acordo com a operadora.
     def test_create_message_vivo(self):
         messagefacade = MessageFacade()
         serializer = messagefacade.create(json.loads('{"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63", "ddd": "12", "celular": "996958849", "operadora": "vivo", "horario_envio": "17:24:03", "mensagem":  "ola mundo"}'))
