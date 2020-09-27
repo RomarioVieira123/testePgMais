@@ -1,0 +1,259 @@
+[
+  {
+    "model": "shareds.Country",
+    "pk": 1,
+    "fields": {
+      "name": "Brazil",
+      "name_pt": "Brasil",
+      "sigla": "BR",
+      "bacen": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 1,
+    "fields": {
+      "name": "São Paulo",
+      "uf": "SP",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 2,
+    "fields": {
+      "name": "Bauru",
+      "uf": "SP",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 3,
+    "fields": {
+      "name": "Sorocaba",
+      "uf": "SP",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 4,
+    "fields": {
+      "name": "Curitiba",
+      "uf": "PR",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 5,
+    "fields": {
+      "name": "Ponta Grossa",
+      "uf": "PR",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 6,
+    "fields": {
+      "name": "Belo Horizonte",
+      "uf": "MG",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 7,
+    "fields": {
+      "name": "Rio de Janeiro",
+      "uf": "RJ",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 8,
+    "fields": {
+      "name": "Caxias do Sul",
+      "uf": "RS",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 9,
+    "fields": {
+      "name": "Cascavel",
+      "uf": "PR",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 10,
+    "fields": {
+      "name": "Itu",
+      "uf": "SP",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 11,
+    "fields": {
+      "name": "São José dos Campos",
+      "uf": "SP",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.City",
+    "pk": 12,
+    "fields": {
+      "name": "Taubaté",
+      "uf": "SP",
+      "ibge": ""
+    }
+  },
+  {
+    "model": "shareds.Stat",
+    "pk": 1,
+    "fields": {
+      "name": "São Paulo",
+      "uf": "SP",
+      "ibge": "",
+      "ddd": "11"
+    }
+  },
+  {
+    "model": "shareds.Stat",
+    "pk": 2,
+    "fields": {
+      "name": "São Paulo",
+      "uf": "SP",
+      "ibge": "",
+      "ddd": "12"
+    }
+  },
+  {
+    "model": "shareds.Stat",
+    "pk": 3,
+    "fields": {
+      "name": "Rondônia",
+      "uf": "RO",
+      "ibge": "",
+      "ddd": "69"
+    }
+  },
+  {
+    "model": "shareds.Stat",
+    "pk": 4,
+    "fields": {
+      "name": "Minas Gerais",
+      "uf": "MG",
+      "ibge": "",
+      "ddd": "34"
+    }
+  },
+  {
+    "model": "shareds.Stat",
+    "pk": 5,
+    "fields": {
+      "name": "Paraná",
+      "uf": "PR",
+      "ibge": "",
+      "ddd": "43"
+    }
+  },
+  {
+    "model": "shareds.Stat",
+    "pk": 6,
+    "fields": {
+      "name": "Rio de Janeiro",
+      "uf": "RJ",
+      "ibge": "",
+      "ddd": "21"
+    }
+  },
+  {
+    "model": "shareds.Stat",
+    "pk": 7,
+    "fields": {
+      "name": "Paraná",
+      "uf": "PR",
+      "ibge": "",
+      "ddd": "42"
+    }
+  },
+  {
+    "model": "broker.Broker",
+    "pk": 1,
+    "fields": {
+      "name": "romario",
+      "created_at": "2020-09-24 11:54:20"
+    }
+  },
+  {
+    "model": "broker.Broker",
+    "pk": 2,
+    "fields": {
+      "name": "tiago",
+      "created_at": "2020-09-24 11:54:20"
+    }
+  },
+  {
+    "model": "broker.Broker",
+    "pk": 3,
+    "fields": {
+      "name": "vanessa",
+      "created_at": "2020-09-24 11:54:20"
+    }
+  },
+  {
+    "model": "telephone_operator.TelephoneOperator",
+    "pk": 1,
+    "fields": {
+      "operator": "vivo",
+      "created_at": "2020-09-24 11:54:20",
+      "broker_id": 1
+    }
+  },
+  {
+    "model": "telephone_operator.TelephoneOperator",
+    "pk": 2,
+    "fields": {
+      "operator": "tim",
+      "created_at": "2020-09-24 11:54:20",
+      "broker_id": 1
+    }
+  },
+    {
+    "model": "telephone_operator.TelephoneOperator",
+    "pk": 3,
+    "fields": {
+      "operator": "claro",
+      "created_at": "2020-09-24 11:54:20",
+      "broker_id": 2
+    }
+  },
+  {
+    "model": "telephone_operator.TelephoneOperator",
+    "pk": 4,
+    "fields": {
+      "operator": "oi",
+      "created_at": "2020-09-24 11:54:20",
+      "broker_id": 2
+    }
+  },
+  {
+    "model": "telephone_operator.TelephoneOperator",
+    "pk": 5,
+    "fields": {
+      "operator": "nextel",
+      "created_at": "2020-09-24 11:54:20",
+      "broker_id": 3
+    }
+  }
+]

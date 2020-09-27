@@ -1,0 +1,14 @@
+python3 -m virtualenv venv
+. venv/bin/activate
+pip install django
+django-admin startproject brokers_messages .
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser(Login: admin / Senha: abc123@@)
+python manage.py runserver
+pip install djangorestframework
+python3 manage.py startapp message
+python3 manage.py startapp broker
+python3 manage.py startapp telephone_operator
+python3 manage.py startapp ddd
+python3 manage.py loaddata shareds.json
