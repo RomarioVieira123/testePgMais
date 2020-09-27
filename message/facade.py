@@ -1,6 +1,3 @@
-from datetime import datetime
-
-from core.settings import DATE_FORMAT
 from message.models import Message
 from message.serializers import MessageSerializer
 from shareds.models import Stat

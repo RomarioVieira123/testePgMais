@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -123,9 +124,10 @@ STATIC_URL = '/static/'
 
 WS_URL = os.environ.get('WS_URL', 'https://front-test-pg.herokuapp.com/blacklist')
 
-DATE_FORMAT = os.environ.get('DATE_FORMAT',  "%H:%M:%S")
-LIMIT_MESSAGE = os.environ.get('LIMIT_MESSAGE',  140)
-LIMIT_CHAR_DDD = os.environ.get('LIMIT_CHAR_DDD',  2)
-LIMIT_DIG_CELULAR = os.environ.get('LIMIT_DIG_CELULAR',  9)
-LIMIT_HOUR = os.environ.get('LIMIT_HOUR',  "19:59:59")
+DATE_FORMAT = os.environ.get('DATE_FORMAT', "%H:%M:%S")
+LIMIT_MESSAGE = os.environ.get('LIMIT_MESSAGE', 140)
+LIMIT_CHAR_DDD = os.environ.get('LIMIT_CHAR_DDD', 2)
+LIMIT_DIG_CELULAR = os.environ.get('LIMIT_DIG_CELULAR', 9)
+LIMIT_HOUR = os.environ.get('LIMIT_HOUR', "19:59:59")
 
+django.setup()

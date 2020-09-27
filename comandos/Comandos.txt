@@ -12,3 +12,12 @@ python3 manage.py startapp broker
 python3 manage.py startapp telephone_operator
 python3 manage.py startapp ddd
 python3 manage.py loaddata shareds.json
+
+COMANDOS DE TESTE
+export DJANGO_SETTINGS_MODULE=core.settings
+
+python3 manage.py test message.tests.CreateMessagesCase.test_create_message_vivo
+python3 manage.py test message.tests.CreateMessagesCase.test_create_message_tim
+python3 manage.py test message.tests.CreateMessagesCase.test_create_message_claro
+python3 manage.py test message.tests.CreateMessagesCase.test_create_message_oi
+python3 manage.py test message.tests.CreateMessagesCase.test_create_message_nextel
