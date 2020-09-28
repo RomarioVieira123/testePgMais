@@ -37,6 +37,11 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
     </li>
 </ul>
 <h2 id="estruturaprojeto">Estrutura do Projeto</h2>
+    <p>
+        A estrutura do projeto está organizado em 4 apps, sendo elas broker, message, shareds, telephone_operator e o projeto core.
+        A organização do banco de dados obedece a estrura abaixo:
+        <img src="Diagrama%20API%20Broker_Message.png" alt="">
+    </p>
 <h2 id="regras">Regras</h2>
 <h2 id="testeunitarios">Teste Unitários</h2>
 <h2 id="instrucoesteste">Instruções de Teste</h2>
