@@ -89,15 +89,25 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
 <h2 id="instrucoesteste">Instruções de Teste</h2>
     <p>A implementação dos testes unitários foram realizados testando a gravação das mensagens válidas e retorno da resposta no banco de dados e o retorno das validações das mensagens.
     Para executar o test de gravação das mensagens de acordo com a operadora, basta digitar o comando abaixo na linha de comando:</p>
+    <br>
     <span>export DJANGO_SETTINGS_MODULE=core.settings</span>
+    <br>
     <span>python3 manage.py test message.tests.CreateMessagesCase.test_create_message_vivo</span>
+    <br>   
     <span>python3 manage.py test message.tests.CreateMessagesCase.test_create_message_tim</span>
+    <br>
     <span>python3 manage.py test message.tests.CreateMessagesCase.test_create_message_claro</span>
+    <br>
     <span>python3 manage.py test message.tests.CreateMessagesCase.test_create_message_oi</span>
+    <br>
     <span>python3 manage.py test message.tests.CreateMessagesCase.test_create_message_nextel</span> 
+    <br>
     <p>Para executar o test de validação das mensagens, deve se executar o comando abaixo na linha de comando:</p>
+    <br>
     <span>export DJANGO_SETTINGS_MODULE=core.settings</span>
+    <br>
     <span>python3 manage.py test shareds.tests.ValidateMessageCase.test_validate_message</span>
+    <br>
     <p>Para esse test o arquivo /shareds/test.py, possui erros específicos comentados para se testar o retorno do método.</p>  
 <h2 id="instrucoesexecucao">Instruções de Execução</h2>
     <p>Para realizar o teste da aplicação deve ser usado a ferramenta Postman, ferramenta muito utilizada por desenvolvedores para
@@ -106,6 +116,7 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
     execução do Django e configurar os parâmentros de acordo com a imagem.
     <img src="Teste%20Aplicação.png" alt="">
     No campo de dados adicionar os dados localizados em /comandos/Dados usados para test.text.
+    <img src="Teste%20Aplicação%203.png" alt="">
     Ao solicitar a requisição o retorno deve ser as mensagens válidas com seu respectivo broker.
     <img src="Teste%20Aplicação%202.png" alt="">
     </p>
