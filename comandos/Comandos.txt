@@ -16,11 +16,11 @@ python3 manage.py loaddata shareds.json
 COMANDOS DE TESTE
 export DJANGO_SETTINGS_MODULE=core.settings
 
-python3 manage.py test message.tests.CreateMessagesCase.test_create_message_vivo
-python3 manage.py test message.tests.CreateMessagesCase.test_create_message_tim
-python3 manage.py test message.tests.CreateMessagesCase.test_create_message_claro
-python3 manage.py test message.tests.CreateMessagesCase.test_create_message_oi
-python3 manage.py test message.tests.CreateMessagesCase.test_create_message_nextel
-
-python3 manage.py test shareds.tests.ValidateMessageCase.test_validate_message
+python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_vivo
+python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_tim
+python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_claro
+python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_oi
+python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_nextel
+python3 manage.py test shareds.tests.ValidateMessageTestCase.test_rules_validated
+python3 manage.py test shareds.tests.ValidateMessageTestCase.test_rules_invalid
 pip freeze > requirements.txt

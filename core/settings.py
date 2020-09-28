@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 import django
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,6 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '!0pc9mpea4rmn9h9&!%2y@wrm)yv^3gptccwhwmzvfs+pz$hq1'
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DJANGO_DEBUG", True)
@@ -45,6 +48,8 @@ INSTALLED_APPS = [
     'telephone_operator',
     'shareds',
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -122,6 +127,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+
 WS_URL = os.environ.get('WS_URL', 'https://front-test-pg.herokuapp.com/blacklist')
 
 DATE_FORMAT = os.environ.get('DATE_FORMAT', "%H:%M:%S")
@@ -129,5 +136,5 @@ LIMIT_MESSAGE = os.environ.get('LIMIT_MESSAGE', 140)
 LIMIT_CHAR_DDD = os.environ.get('LIMIT_CHAR_DDD', 2)
 LIMIT_DIG_CELULAR = os.environ.get('LIMIT_DIG_CELULAR', 9)
 LIMIT_HOUR = os.environ.get('LIMIT_HOUR', "19:59:59")
-
 django.setup()
+

@@ -110,6 +110,17 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
     <br>
     <p>Para esse test o arquivo /shareds/test.py, possui erros específicos comentados para se testar o retorno do método.</p>  
 <h2 id="instrucoesexecucao">Instruções de Execução</h2>
+    Antes de execução a aplicação deve ser instalado o ambiente virtual.
+    Para instalação utilizar o comando python3 -m virtualenv venv.
+    Após a instalação ativar o ambiente virtual: . venv/bin/activate
+    Para a configuração do banco os seguintes comando devem ser executados:
+    <br>
+     - python manage.py makemigrations 
+    <br>
+     - python manage.py migrate    
+     <br>
+    Ao abrir o pycharm e realizar a instalação do ambiente virtual a instalação do frameworks ocorre de maneira automatica após
+    autorização pelo arquivo requirements.txt.
     <p>Para realizar o teste da aplicação deve ser usado a ferramenta Postman, ferramenta muito utilizada por desenvolvedores para
     se testar API's, obtida no endereço <a href="https://www.postman.com/">Download Postman</a> de acordo com a versão do Sistema Operacional.
     Com a instalação do Postman realizada e a aplicação rodando, deve adicionar a url ao ferramenta Postman configurando o endereço e porta de

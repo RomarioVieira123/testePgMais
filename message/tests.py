@@ -8,7 +8,8 @@ from shareds.models import Stat
 from telephone_operator.models import TelephoneOperator
 
 
-class CreateMessagesCase(TestCase):
+class RegisterMessageTestCase(TestCase):
+    messagefacade = MessageFacade()
 
     def setUp(self):
         TelephoneOperator.objects.create(operator="vivo", broker_id=1)
@@ -27,28 +28,68 @@ class CreateMessagesCase(TestCase):
         Broker.objects.create(name="tiago")
         Broker.objects.create(name="vanessa")
 
-    #Testar gravação da mensagem no banco de dados e o retorno do respectivo broker de acordo com a operadora.
+    # Testar gravação da mensagem no banco de dados e o retorno do respectivo broker de acordo com a operadora.
     def test_create_message_vivo(self):
-        messagefacade = MessageFacade()
-        serializer = messagefacade.create(json.loads('{"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63", "ddd": "12", "celular": "996958849", "operadora": "vivo", "horario_envio": "17:24:03", "mensagem":  "ola mundo"}'))
-        self.assertEqual(json.dumps(serializer), '{"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63", "operator": {"broker": 1}}')
+        message = {"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63",
+                   "ddd": "12",
+                   "celular": "996958849",
+                   "operadora": "vivo",
+                   "horario_envio": "17:24:03",
+                   "mensagem": "ola mundo"}
+
+        serializer = self.messagefacade.create(message)
+        self.assertEqual(json.dumps(serializer),
+                         json.dumps({"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63",
+                                     "operator": {"broker": 1}}))
 
     def test_create_message_tim(self):
-        messagefacade = MessageFacade()
-        serializer = messagefacade.create(json.loads('{"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63", "ddd": "12", "celular": "996958849", "operadora": "tim", "horario_envio": "17:24:03", "mensagem":  "ola mundo"}'))
-        self.assertEqual(json.dumps(serializer), '{"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63", "operator": {"broker": 1}}')
+        message = {"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63",
+                   "ddd": "12",
+                   "celular": "996958849",
+                   "operadora": "tim",
+                   "horario_envio": "17:24:03",
+                   "mensagem": "ola mundo"}
+
+        serializer = self.messagefacade.create(message)
+        self.assertEqual(json.dumps(serializer),
+                         json.dumps({"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63",
+                                     "operator": {"broker": 1}}))
 
     def test_create_message_claro(self):
-        messagefacade = MessageFacade()
-        serializer = messagefacade.create(json.loads('{"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63", "ddd": "12", "celular": "996958849", "operadora": "claro", "horario_envio": "17:24:03", "mensagem":  "ola mundo"}'))
-        self.assertEqual(json.dumps(serializer), '{"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63", "operator": {"broker": 2}}')
+        message = {"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63",
+                   "ddd": "12",
+                   "celular": "996958849",
+                   "operadora": "claro",
+                   "horario_envio": "17:24:03",
+                   "mensagem": "ola mundo"}
+
+        serializer = self.messagefacade.create(message)
+        self.assertEqual(json.dumps(serializer),
+                         json.dumps({"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63",
+                                     "operator": {"broker": 2}}))
 
     def test_create_message_oi(self):
-        messagefacade = MessageFacade()
-        serializer = messagefacade.create(json.loads('{"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63", "ddd": "12", "celular": "996958849", "operadora": "oi", "horario_envio": "17:24:03", "mensagem":  "ola mundo"}'))
-        self.assertEqual(json.dumps(serializer), '{"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63", "operator": {"broker": 2}}')
+        message = {"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63",
+                   "ddd": "12",
+                   "celular": "996958849",
+                   "operadora": "oi",
+                   "horario_envio": "17:24:03",
+                   "mensagem": "ola mundo"}
+
+        serializer = self.messagefacade.create(message)
+        self.assertEqual(json.dumps(serializer),
+                         json.dumps({"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63",
+                                     "operator": {"broker": 2}}))
 
     def test_create_message_nextel(self):
-        messagefacade = MessageFacade()
-        serializer = messagefacade.create(json.loads('{"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63", "ddd": "12", "celular": "996958849", "operadora": "nextel", "horario_envio": "17:24:03", "mensagem":  "ola mundo"}'))
-        self.assertEqual(json.dumps(serializer), '{"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63", "operator": {"broker": 3}}')
+        message = {"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63",
+                   "ddd": "12",
+                   "celular": "996958849",
+                   "operadora": "nextel",
+                   "horario_envio": "17:24:03",
+                   "mensagem": "ola mundo"}
+
+        serializer = self.messagefacade.create(message)
+        self.assertEqual(json.dumps(serializer),
+                         json.dumps({"idmensagem": "bff58d7b-8b4a-456a-b852-5a3e000c0e63",
+                                     "operator": {"broker": 3}}))

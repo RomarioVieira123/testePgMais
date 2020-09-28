@@ -5,8 +5,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 
-from message.models import Message
-from message.serializers import MessageSerializer
+
 from shareds.facades import ValidationFacade, GenerateFacade
 
 
