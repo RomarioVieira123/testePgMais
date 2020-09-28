@@ -106,10 +106,9 @@ class ValidationFacade:
                 data_isnotvalid.append(json.dumps(blocked_message))
                 data_isvalid.remove(json.dumps(blocked_message))
 
+        # Salvo as mensagens válidas no banco de dados retornando em json somente o id_broker e id_mensagem para a mensagem enviada e válida.
         message = MessageFacade()
         retorno = []
-
-        # Salvo as mensagens válidas no banco de dados retornando em json somente o id_broker e id_mensagem para a mensagem enviada e válida.
         for data in data_isvalid:
             data = json.loads(data)
             retorno.append(message.create(data))
