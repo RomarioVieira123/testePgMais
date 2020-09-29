@@ -121,6 +121,10 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
             <li>python manage.py makemigrations</li>
             <li>python manage.py migrate</li>
         </ul>
+        Após as migrações realizar a configurações dos dados fictíceos para teste da aplicação. Digita o seguinte comando a linha de comando:
+        <ul>
+            <li>python3 manage.py loaddata shareds.json</li>
+        </ul>
     <h3 id="instrucoetesteaplicacao">Instruções de teste aplicação</h3>
         <p>Para realizar o teste da aplicação deve ser usado a ferramenta Postman, ferramenta muito utilizada por desenvolvedores para
            se testar API's, obtida no endereço <a href="https://www.postman.com/">Download Postman</a> de acordo com a versão do Sistema Operacional.
