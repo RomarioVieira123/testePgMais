@@ -121,7 +121,7 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
             <li>python manage.py makemigrations</li>
             <li>python manage.py migrate</li>
         </ul>
-        Após as migrações realizar a configurações dos dados fictíceos para teste da aplicação. Digita o seguinte comando a linha de comando:
+        Após as migrações, realizar as configurações dos dados fictíceos para teste da aplicação. Digita o seguinte comando a linha de comando:
         <ul>
             <li>python3 manage.py loaddata shareds.json</li>
         </ul>
