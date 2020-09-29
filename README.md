@@ -17,15 +17,9 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
     </li>
     <li><a href="#regras">Regras</a></li>
     <li><a href="#testeunitarios">Testes unitários</a>
-        <ul>
-             <li><a href="#instrucoesteste">Instruções de teste</a></li>
-        </ul>
-    </li>
-    <li><a href="#instrucoesexecucao">Inicializar aplicação</a>
-         <ul>
-             <li><a href="#instrucoesteste">Instruções de execução</a></li>
-        </ul>  
-    </li>
+    <li><a href="#instrucoesteste">Instruções de teste</a></li>
+    <li><a href="#instrucoesapi">API</a>
+    <li><a href="#instrucoesexecucao">Instruções de execução</a></li>
     <li><a href="#tecnologiasusadas">Tecnologias Usadas para Desenvolvimento</a>
         <ul>
             <li><a href="#sistemaoperacional">Sistema Operacional</a></li>
@@ -85,8 +79,8 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
         <li>Mensagens com nº de celular com mais ou menos de 9 dígitos, devem ser bloqueadas.</li>
         <li>Mensagens com nº de celular em que o 1º dígito não começe com 9 ou o 2 dígito menor que 6 devem ser bloqueadas.</li>   
     </ul>
-<h2 id="testeunitarios">Teste Unitários</h2>
-<h3 id="instrucoesteste">Instruções de Teste</h3>
+<h2 id="testeunitarios">Teste unitários</h2>
+<h3 id="instrucoesteste">Instruções de teste</h3>
     <p>A implementação dos testes unitários foram realizados com o objetivo de se testar a gravação das mensagens válidas no banco de dados e retorno da resposta das validações das mensagens.
     <p>Para executar o teste de gravação das mensagens de acordo com a operadora, basta digitar os comandos abaixo na linha de comando:</p>
     <ul>
@@ -108,7 +102,8 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
     </ul>
     <br>
     <p>As variáveis contendo as mensagens é possível se alterar para cada tive de erro em paralelo com a regras impostas.</p>  
-<h2 id="instrucoesexecucao">Instruções de Execução</h2>
+<h2 id="instrucoesapi">API</h2>
+<h3 id="instrucoesexecucao">Instruções de execucão</h3>
     Antes de execução a aplicação deve ser instalado o ambiente virtual.
     Para instalação utilizar o comando python3 -m virtualenv venv.
     Após a instalação ativar o ambiente virtual: . venv/bin/activate
