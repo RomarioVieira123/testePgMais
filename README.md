@@ -12,7 +12,7 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
             <li><a href="#appmessage">App Message</a></li>
             <li><a href="#appshared">App Shareds</a></li>
             <li><a href="#apptelephoneoperator">App Telephone Operator</a></li>
-            <li><a href="#projetocore">Project Core</a></li>
+            <li><a href="#projetocore">Projeto Core</a></li>
         </ul>
     </li>
     <li><a href="#regras">Regras</a></li>
@@ -110,11 +110,13 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
             <li>python3 -m virtualenv venv</li>
         </ul>
         Após instalação, realizar a ativação do ambiente virtual, através do comando:
+        <br>
         <ul>
             <li>. venv/bin/activate</li>
         </ul>
         Após a ativação do ambiente virtual, realizar as migrações necessárias para ocorrer a criação do modelos e a criação do banco de dados .sqlite.
-        Executar os comando abaixo:
+        Executar os comandos abaixo:
+        <br>
         <ul>
             <li>python manage.py makemigrations</li>
             <li>python manage.py migrate</li>
