@@ -80,65 +80,68 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
         <li>Mensagens com nº de celular em que o 1º dígito não começe com 9 ou o 2 dígito menor que 6 devem ser bloqueadas.</li>   
     </ul>
 <h2 id="testeunitarios">Teste unitários</h2>
-<h3 id="instrucoesteste">Instruções de teste</h3>
-    <p>A implementação dos testes unitários foram realizados com o objetivo de se testar a gravação das mensagens válidas no banco de dados e retorno da resposta das validações das mensagens.
-    <p>Para executar o teste de gravação das mensagens de acordo com a operadora, basta digitar os comandos abaixo na linha de comando:</p>
-    <ul>
-        <li>export DJANGO_SETTINGS_MODULE=core.settings</li>
-        <li>python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_vivo</li>
-        <li>python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_tim</li>
-        <li>python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_claro</li>
-        <li>python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_oi</li>
-        <li>python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_nextel</li>
-    </ul>
-    <p>Para executar o teste de validação das mensagens, digitar o comando abaixo na linha de comando:</p>
-    <ul>
-        <li>python3 manage.py test shareds.tests.ValidateMessageTestCase.test_rules_validated</li>    
-    </ul>
-    <br>
-    <p>Para executar o teste de validação das mensagens inválidas, digitar o comando abaixo na linha de comando:</p>
+    <h3 id="instrucoesteste">Instruções de teste</h3>
+        <p>A implementação dos testes unitários foram realizados com o objetivo de se testar a gravação das mensagens válidas no banco de dados e retorno da resposta das validações das mensagens.
+        <p>Para executar o teste de gravação das mensagens de acordo com a operadora, basta digitar os comandos abaixo na linha de comando:</p>
         <ul>
-        <li>python3 manage.py test shareds.tests.ValidateMessageTestCase.test_rules_invalid</li>    
-    </ul>
-    <br>
-    <p>As variáveis contendo as mensagens é possível se alterar para cada tive de erro em paralelo com a regras impostas.</p>  
+            <li>export DJANGO_SETTINGS_MODULE=core.settings</li>
+            <li>python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_vivo</li>
+            <li>python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_tim</li>
+            <li>python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_claro</li>
+            <li>python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_oi</li>
+            <li>python3 manage.py test message.tests.RegisterMessageTestCase.test_create_message_nextel</li>
+        </ul>
+        <p>Para executar o teste de validação das mensagens, digitar o comando abaixo na linha de comando:</p>
+        <ul>
+            <li>python3 manage.py test shareds.tests.ValidateMessageTestCase.test_rules_validated</li>    
+        </ul>
+        <br>
+        <p>Para executar o teste de validação das mensagens inválidas, digitar o comando abaixo na linha de comando:</p>
+            <ul>
+                <li>python3 manage.py test shareds.tests.ValidateMessageTestCase.test_rules_invalid</li>    
+            </ul>
+        <br>
+        <p>A variável <i>"data"</i> contém, as mensagens para se testar o método. Alterar de acordo com a regra específica para se testar o método.</p>  
 <h2 id="instrucoesapi">API</h2>
-<h3 id="instrucoesexecucao">Instruções de execucão</h3>
-    Antes de execução a aplicação deve ser instalado o ambiente virtual.
-    Para instalação utilizar o comando python3 -m virtualenv venv.
-    Após a instalação ativar o ambiente virtual: . venv/bin/activate
-    Para a configuração do banco os seguintes comando devem ser executados:
-    <br>
-     - python manage.py makemigrations 
-    <br>
-     - python manage.py migrate    
-     <br>
-    Ao abrir o pycharm e realizar a instalação do ambiente virtual a instalação do frameworks ocorre de maneira automatica após
-    autorização pelo arquivo requirements.txt.
-    <p>Para realizar o teste da aplicação deve ser usado a ferramenta Postman, ferramenta muito utilizada por desenvolvedores para
-    se testar API's, obtida no endereço <a href="https://www.postman.com/">Download Postman</a> de acordo com a versão do Sistema Operacional.
-    Com a instalação do Postman realizada e a aplicação rodando, deve adicionar a url ao ferramenta Postman configurando o endereço e porta de
-    execução do Django e configurar os parâmentros de acordo com a imagem.
-    <img src="images/Teste%20Aplicação.png" alt="">
-    No campo de dados adicionar os dados localizados em /comandos/Dados usados para test.text.
-    <img src="images/Teste%20Aplicação%203.png" alt="">
-    Ao solicitar a requisição o retorno deve ser as mensagens válidas com seu respectivo broker.
-    <img src="images/Teste%20Aplicação%202.png" alt="">
-    </p>
-<h2 id="tecnologiasusadas">Tecnologias Usadas para Desenvolvimento</h2>
-<ul>
-    <li><h4 id="sistemaoperacional">Sistema Operacional</h4>
-    Sistema operacional Kubuntu versão 20.04 64 bits...   
-    </li>
-    <li><h4 id="ide">IDE</h4>
-    Pycharm Profissional 2020.2  
-    </li>
-    <li><h4 id="frameworks">Frameworks</h4>
-    Django versão 3.1.1 - Django Rest Framework versão 3.11.1 - *Ver requirements.txt  
-    </li>
-    <li><h4 id="testeapi">Teste API</h4>
-    Postman for Linux - versão 7.33.1
-    </li>
-
-</ul>
+    <h3 id="instrucoesexecucao">Instruções de execucão</h3>
+        <p>
+        Ao abrir o projeto pela IDE Pycharm, realizar a instalação do ambiente virtualenv, atráves do seguindo comando:
+        <ul>
+            <li>python3 -m virtualenv venv</li>
+        </ul>
+        Após instalação, realizar a ativação do ambiente virtual, através do comando:
+        <ul>
+            <li>. venv/bin/activate</li>
+        </ul>
+        Após a ativação do ambiente virtual, realizar as migrações necessárias para ocorrer a criação do modelos e a criação do banco de dados .sqlite.
+        Executar os comando abaixo:
+        <ul>
+            <li>python manage.py makemigrations</li>
+            <li>python manage.py migrate</li>
+        </ul>
+    <h3 id="instrucoetesteaplicacao">Instruções de teste aplicação</h3>
+        <p>Para realizar o teste da aplicação deve ser usado a ferramenta Postman, ferramenta muito utilizada por desenvolvedores para
+           se testar API's, obtida no endereço <a href="https://www.postman.com/">Download Postman</a> de acordo com a versão do Sistema Operacional.
+           Com a instalação do Postman realizada e a aplicação rodando, deve adicionar a url ao ferramenta Postman configurando o endereço e porta de
+           execução do Django e configurar os parâmentros de acordo com a imagem.
+        <img src="images/Teste%20Aplicação.png" alt=""></p>
+            No campo de dados adicionar os dados localizados em /comandos/Dados usados para test.text.
+            <img src="images/Teste%20Aplicação%203.png" alt="">
+            Ao solicitar a requisição o retorno deve ser as mensagens válidas com seu respectivo broker.
+        <img src="images/Teste%20Aplicação%202.png" alt="">
+    <h3 id="tecnologiasusadas">Tecnologias Usadas para Desenvolvimento</h3>
+        <ul>
+            <li><h4 id="sistemaoperacional">Sistema Operacional</h4>
+            Sistema operacional Kubuntu versão 20.04 64 bits...   
+            </li>
+            <li><h4 id="ide">IDE</h4>
+            Pycharm Profissional 2020.2  
+            </li>
+            <li><h4 id="frameworks">Frameworks</h4>
+            Django versão 3.1.1 - Django Rest Framework versão 3.11.1 - *Ver requirements.txt  
+            </li>
+            <li><h4 id="testeapi">Teste API</h4>
+            Postman for Linux - versão 7.33.1
+            </li>     
+        </ul>
 </body>
