@@ -112,7 +112,7 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
         Após instalação, realizar a ativação do ambiente virtual, através do comando:
         <br>
         <ul>
-            <li>. venv/bin/activate</li>
+            <li>. venv/bin/activate</li> 
         </ul>
         Após a ativação do ambiente virtual, realizar as migrações necessárias para ocorrer a criação do modelos e a criação do banco de dados .sqlite.
         Executar os comandos abaixo:
@@ -150,4 +150,5 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
             Postman for Linux - versão 7.33.1
             </li>     
         </ul>
+        
 </body>
