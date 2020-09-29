@@ -16,17 +16,16 @@ aptas para envio e seu respectivo broker, validadas de acordo com as regras prop
         </ul>
     </li>
     <li><a href="#regras">Regras</a></li>
-    <li><a href="#testeunitarios">Testes Unitários</a>
+    <li><a href="#testeunitarios">Testes unitários</a>
         <ul>
-             <li><a href="">Gravação da Mensagem e Retorno</a></li>
-             <li><a href="">Validação blackList</a></li>
-             <li><a href="">Validação celular</a></li>
-             <li><a href="">Validação DDD</a></li>
-             <li><a href="">Validação mensagem</a></li>
+             <li><a href="#instrucoesteste">Instruções de teste</a></li>
         </ul>
     </li>
-    <li><a href="#instrucoesteste">Instruções de Teste</a></li>
-    <li><a href="#instrucoesexecucao">Instruções de Execução</a></li>
+    <li><a href="#instrucoesexecucao">Inicializar aplicação</a>
+         <ul>
+             <li><a href="#instrucoesteste">Instruções de execução</a></li>
+        </ul>  
+    </li>
     <li><a href="#tecnologiasusadas">Tecnologias Usadas para Desenvolvimento</a>
         <ul>
             <li><a href="#sistemaoperacional">Sistema Operacional</a></li>
